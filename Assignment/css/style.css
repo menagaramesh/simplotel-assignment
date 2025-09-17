@@ -1,0 +1,337 @@
+/* CSS - style.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background: linear-gradient(to bottom right, #f8f398, #ffb0fe);
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+header {
+  background: #f77b72;
+  padding: 13px 0;
+  /* Increased vertical padding for taller navbar */
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  /* Increased gap between items */
+  width: 100%;
+  justify-content: center;
+}
+
+nav ul li {
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-family: Georgia, serif;
+  font-size: 20px;
+  /* Increased text size for visibility */
+  transition: color 0.2s;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.hamburger {
+  margin-left: -30px;
+  /* Space between last item and hamburger */
+  display: flex;
+  align-items: center;
+}
+
+.hamburger img {
+  width: 38px;
+  /* Larger hamburger icon */
+  height: 38px;
+  cursor: pointer;
+  /* filter: brightness(0) saturate(100%); */
+}
+
+/* Top Hero Section */
+.main-section {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.content {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 5vw 0 5vw;
+  box-sizing: border-box;
+}
+
+.content h1 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 6px;
+  color: #363636;
+  margin-bottom: 34px;
+}
+
+.content p {
+  font-size: 1.09rem;
+  color: #363636;
+  font-family: 'Montserrat', Arial, sans-serif;
+  max-width: 510px;
+  line-height: 1.55;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-align: left;
+  margin-bottom: 2.2em;
+}
+
+.content button {
+  width: 200px; /* Narrow button, matches image */
+  background: #f77b72;
+  color: #fff;
+  border: none;
+  font-size: 1.05rem;
+  padding: 16px 0;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background 0.2s;
+  margin-bottom: 40px;
+  margin-left: 0; /* Left align with paragraph */
+  display: block;
+  text-align: center;
+}
+
+.content button:hover {
+  background: #e96a5f;
+}
+
+.image-part {
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  background: #fff;
+}
+
+.image-part img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center 70%;
+  margin-right: 20px;
+  transform: scale(1.3);
+}
+
+/* Grid + Card Section */
+.better-grid-row {
+  display: flex;
+  align-items: center; /* vert center info card to grid */
+  min-height: 100vh;
+  padding-left: 7vw;
+  gap: 60px;
+}
+
+/* Main grid left side: two stacked images, one big to the right */
+.gallery-container {
+  display: flex;
+  gap: 28px;
+}
+
+.gallery-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gallery-left img {
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.gallery-right img {
+  width: 250px;
+  height: 424px;
+  object-fit: cover;
+}
+
+.gallery-right {
+  align-self: flex-start;
+}
+
+.exact-info-card {
+  background: #f77b72;
+  padding: 30px 34px 32px 34px;
+  border-radius: 2px;
+  width: 430px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.exact-info-top {
+  font-size: 1rem;
+  color: #222;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+  margin-bottom: 20px;
+}
+
+.exact-info-title {
+  font-size: 2.2rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 900;
+  color: #141414;
+  letter-spacing: 3px;
+  margin-bottom: 32px;
+  line-height: 1.07;
+  text-align: left;
+}
+
+.exact-info-link {
+  font-size: 1.14rem;
+  color: #141414;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.arrow-img {
+  width: 24px;
+  /* adjust size as per your image */
+  height: auto;
+  margin-left: 8px;
+  /* spacing from the "Click" text */
+  cursor: pointer;
+  vertical-align: middle;
+  object-fit: contain;
+  user-select: none;
+}
+
+/* Responsive design */
+
+/* Large tablets and smaller laptops */
+@media (max-width: 1024px) {
+  .main-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .content,
+  .image-part {
+    flex-basis: 100%;
+  }
+  .content {
+    padding: 30px 5vw;
+    align-items: center;
+    /* center text on smaller */
+    text-align: center;
+  }
+  .content h1 {
+    font-size: 2.5rem;
+  }
+  .content p {
+    max-width: 100%;
+  }
+  .image-part img {
+    height: auto;
+    max-height: 300px;
+    transform: scale(1);
+    margin-right: 0;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  nav ul {
+    gap: 30px;
+  }
+  .content h1 {
+    font-size: 2rem;
+  }
+  .content p {
+    font-size: 1rem;
+  }
+  .gallery-left img,
+  .gallery-right img {
+    width: 70vw;
+    max-width: 200px;
+    height: auto;
+    max-height: 150px;
+  }
+  .exact-info-card {
+    width: 90vw;
+    padding: 20px;
+    margin-top: 20px;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+  nav ul li {
+    font-size: 16px;
+    letter-spacing: 1.5px;
+  }
+  .hamburger {
+    margin-left: 0;
+  }
+  .content h1 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+  .content p {
+    font-size: 0.9rem;
+  }
+  .content button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+  .gallery-left img,
+  .gallery-right img {
+    width: 90vw;
+    height: auto;
+    max-height: 120px;
+  }
+  .exact-info-card {
+    width: 95vw;
+    padding: 15px;
+  }
+  .better-grid-row {
+    padding-left: 0;
+    gap: 20px;
+  }
+}
